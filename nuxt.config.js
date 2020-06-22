@@ -1,6 +1,7 @@
 
 export default {
   mode: 'universal',
+  srcDir: 'app',
   /*
   ** Headers of the page
   */
@@ -41,6 +42,9 @@ export default {
   */
   modules: [
   ],
+  axios: {
+    databaseURL: "https://nuxt-blog-service-f217f.firebaseio.com"
+  }
   /*
   ** Build configuration
   */
