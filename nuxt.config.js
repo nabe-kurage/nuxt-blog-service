@@ -44,7 +44,7 @@ export default {
   ],
   axios: {
     databaseURL: "https://nuxt-blog-service-f217f.firebaseio.com"
-  }
+  },
   /*
   ** Build configuration
   */
