@@ -9,14 +9,15 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'Vuex'
 export default {
   computed: {
-    showPosts() {
-      return [
-        {}
-      ]
-    }
+    ...mapGetters(['count'])
+  },
+  methods: {
+    ...mapActions(['increment'])
   }
+
 }
 </script>
 

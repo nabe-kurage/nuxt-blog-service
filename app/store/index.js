@@ -1,34 +1,19 @@
 export const state = () => ({
-  isLoggedIn: false,
-  user: null
+  count: 0
 })
 
 export const getters = {
-  isLoggedIn: (state) => state.isLoggedIn,
-  user: (state) => state.user
+  count: (state) => state.count
 }
 
-export const mutation = {
-  setUser(state, { user }) {
-    state.user = user
-    state.isLoggedIn = true
+export const mutations = {
+  increment(state) {
+    state.count++
   }
 }
 
 export const actions = {
-  async login({commit}, {id}) {
-    const user = await this.$axios.$get('/users/${id}'.json)
-    if (!user.id) throw new Effor('Invalid user')
-    commit('setUser', {user})
-  },
-  async register({commit}, {id}) {
-    const payland = {}
-    payland[id] = { id }
-    await this.$axios.$patch('/users/${id}.json/')
-    if (!user.id) throw new Error('Invalid user')
-    commit('setUser', {user})
-
+  increment({ commit }) {
+    commit('invrement')
   }
 }
-
-
