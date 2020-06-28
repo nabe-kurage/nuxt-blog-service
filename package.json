@@ -11,6 +11,18 @@
     "generate": "nuxt generate",
     "test": "jest"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["vue-app"]
+      }
+    }
+  }
   "dependencies": {
     "@vue/test-utils": "^1.0.3",
     "element-ui": "^2.4.11",
