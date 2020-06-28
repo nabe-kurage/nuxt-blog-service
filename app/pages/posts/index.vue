@@ -9,16 +9,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'Vuex'
-export default {
-  computed: {
-    ...mapGetters(['count'])
-  },
-  methods: {
-    ...mapActions(['increment'])
-  }
 
-}
 </script>
 
 <style>

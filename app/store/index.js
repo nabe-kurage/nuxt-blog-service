@@ -1,19 +1,26 @@
-export const state = () => ({
+const state = () => ({
   count: 0
 })
 
-export const getters = {
+const getters = {
   count: (state) => state.count
 }
 
-export const mutations = {
+const mutations = {
   increment(state) {
     state.count++
   }
 }
 
-export const actions = {
+const actions = {
   increment({ commit }) {
-    commit('invrement')
+    commit('increment')
   }
+}
+
+module.exports = {
+  state,
+  getters,
+  mutations,
+  actions
 }
